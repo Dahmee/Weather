@@ -1,0 +1,173 @@
+.section--one {
+    /*  margin: 20px 0px 20px;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh; */
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(220px, auto) repeat(2, 1fr);
+}
+
+.map--container {
+    /*  border: 2px solid red;
+    width: 100%; */
+    height: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#map {
+    height: 100%;
+}
+
+.city-conditions {
+    /*  position: relative;
+    height: 50vh;
+    top: 39px;
+    left: 0;
+    padding: 20px 20px;
+    border-radius: 20px;
+    background: var(--text__light);
+    color: var(--text__med); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: .7em;
+    padding: .7em;
+    border-radius: 20px;
+    background: var(--text__light);
+    color: var(--text__med);
+}
+
+
+/* 
+.city-conditions::before {
+    content: '';
+    width: 90%;
+    height: 50px;
+    position: absolute;
+    top: -12px;
+    left: 5%;
+    z-index: -1;
+    opacity: .3;
+    border-radius: 20px;
+    background: var(--text__light);
+}
+
+.city-conditions::after {
+    content: '';
+    width: 90%;
+    height: 50px;
+    position: absolute;
+    bottom: -12px;
+    left: 5%;
+    z-index: -1;
+    opacity: .3;
+    border-radius: 20px;
+    background: var(--text__light);
+}
+ */
+
+.section--one .city-temp {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--text__dark);
+}
+
+.section--one .city-conditions .city-name sup {
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.section--one .city-conditions sup {
+    font-size: .5em;
+    color: var(--text__dark);
+    background: var(--orange);
+    cursor: pointer;
+}
+
+.section--one .temperature-description,
+.city-Location {
+    font-size: 2rem;
+}
+
+.section--one .weather-icon img {
+    width: 100%;
+}
+
+.section--one .weather-arrangement {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fb-share-button {
+    position: absolute;
+    top: 20%;
+}
+
+
+/* @media screen and (min-width:500px) { */
+
+@media screen and (min-width:575px) {
+    .heading {
+        font-size: 3rem;
+    }
+    form {
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        position: relative;
+    }
+    .input {
+        font-size: 2.3rem;
+        height: 60px;
+        padding: 5px 5px 10px;
+    }
+    /*  .section--one .cities {
+        grid-gap: 20px 15px;
+        grid-template-columns: repeat(4, 1fr);
+    } */
+    .btnLocate {
+        position: absolute;
+        top: 23%;
+        left: 20%;
+    }
+    .btnLocate i {
+        font-size: 2rem;
+    }
+    .section--one {
+        position: relative;
+    }
+    .city-conditions {
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        top: -20px;
+        height: 50vh;
+        left: 65%;
+        margin: 7em;
+        padding: 20px 20px;
+        border-radius: 20px;
+        background: var(--text__light);
+        color: var(--text__med);
+    }
+    .map--container {
+        position: absolute;
+        left: 10%;
+        width: 50%;
+        top: 40%;
+    }
+    .section--one .city-conditions sup {
+        font-size: 3rem;
+    }
+    .section--one .city-conditions .city-name sup {
+        font-size: 1.5rem;
+    }
+    .fb-share-button {
+        position: absolute;
+        top: 30%;
+    }
+}

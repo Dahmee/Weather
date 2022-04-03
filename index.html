@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no" />
+
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+
+
+
+    <title>Geo-search</title>
+</head>
+
+<body>
+
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="i1QfsSpE"></script>
+
+    <header class="main-header">
+        <h1 class="heading">Geo-Search App</h1>
+
+        <!-- <nav>
+            <ul>
+                <li class="list-item"><a href="#">Maps</a></li>
+
+            </ul>
+
+        </nav> -->
+        <form aria-checked="true">
+            <input type="text" placeholder="search for a location" class="input" required>
+            <button type="submit" class="btn"><i class="fas fa-search"></i></button>
+
+            <span class="msg"></span>
+        </form>
+
+    </header>
+
+    <div class="fb-share-button" data-href="https://moosaa95.github.io/geo-search/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmoosaa95.github.io%2Fgeo-search%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+
+    <section class="section--one" id="weatherConditions">
+        <div class="map--container">
+            <div id="map"></div>
+        </div>
+        <div class="cities">
+            <div class="city-conditions">
+
+                <!-- data-name="name,sys.country,main.humidity,wind.speed" -->
+                <div class="city-name">
+                    <div class="weather-arrangement">
+                        <span class="city-Location" data-name></span>
+                        <div class="weather-icon">
+                            <img class="imgData" src="img/unknown.png" alt="">
+
+                        </div>
+                    </div>
+                    <sup class="country-name" data-country></sup>
+                    <sup class="wind-speed"></sup>
+                    <sup class="humidity"></sup>
+                </div>
+                <div class="city-temp" data-temperature></div>
+
+                <div class="temperature-description"></div>
+            </div>
+        </div>
+
+
+
+        <!--  <div class="location">
+            <p>-</p>
+        </div> -->
+    </section>
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
